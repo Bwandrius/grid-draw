@@ -1,0 +1,20 @@
+#grid-container {
+    width: 80vw;
+    height: 80vh;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .grid-row {
+    display: flex;
+    width: 100%;
+  }
+  
+  .grid-cell {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+
+    background-color: burlywood;
+  }
