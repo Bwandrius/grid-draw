@@ -10,14 +10,25 @@ function fillGrid(size){
 
     for (let i = 0; i < amount; i++) {
         let gridCell = document.createElement('div');
-        gridCell.style.backgroundColor = 'green';
+        gridCell.addEventListener('mouseover', cellColour)
+        gridCell.style.backgroundColor = 'white';
         gridContainer.insertAdjacentElement('beforeend', gridCell); 
     }
 }
 
+function cellColour (){
+    gridCell.style.backgroundColor = 'black';
+}
 
 function changeSize(input){
-    fillGrid(input);
+
+    if (input >= 2 && input <= 100) {
+        fillGrid(input);
+    } else {
+        console.log('invalid input');
+    }
+
+    
 }
 
 // function makeGrid (rows, cols) {
