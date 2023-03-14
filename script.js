@@ -1,4 +1,5 @@
 let colour = "black";
+let click = true;
 
 function fillGrid (size) {
     let gridContainer = document.querySelector('#grid-container');
@@ -26,13 +27,32 @@ function changeSize (input) {
 }
 
 function cellColourFill () {
-    if (colour === 'random') {
-        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    } else {
-        this.style.backgroundColor = colour;
-    }    
+    if (click) {
+        if (colour === 'random') {
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        } else {
+            this.style.backgroundColor = colour;
+        }    
+    }
 }
 
 function changeFillColour (choice) {
     colour = choice;
 }
+
+function resetGrid () {
+    let gridContainer = document.querySelector('#grid-container');
+    let gridCells = gridContainer.querySelectorAll('div');
+    gridCells.forEach(div => div.style.backgroundColor = 'white');
+}
+
+document.querySelector('body').addEventListener('click', (e) => {
+    if (e.target.tagName != 'BUTTON') {
+        click = !click;
+        if (click) {
+            document.querySelector('.mode').textContent = "Mode: Colouring";
+        } else {
+            document.querySelector('.mode').textContent = "Mode: Not Colouring";
+        }
+    }
+})
