@@ -1,4 +1,4 @@
-let colour = "black";
+let color = "black";
 let click = true;
 
 function fillGrid (size) {
@@ -28,10 +28,10 @@ function changeSize (input) {
 
 function cellColourFill () {
     if (click) {
-        if (colour === 'random') {
+        if (color === 'random') {
             this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
         } else {
-            this.style.backgroundColor = colour;
+            this.style.backgroundColor = color;
         }    
     }
 }
