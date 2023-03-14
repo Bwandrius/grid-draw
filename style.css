@@ -15,12 +15,6 @@
   color: var(--text-color);
 }
 
-/* .body,
-.buttons,
-.size-input {
-  color: var(--text-color);
-} */
-
 .title {
   font-size: 24px;
 }
@@ -37,12 +31,13 @@
 .buttons {
   margin-bottom: 3vh;
   display: flex;
-  
+  justify-content: space-around;
 }
 
 .buttons button,
 .size-input button {
   background-color: var(--additional);
+  width: 80px;
 }
 
 .size-input input {
@@ -53,7 +48,7 @@
 .size-input input,
 .size-input button {
   color: var(--text-color);
-  border: 3px solid var(--secondary-background);
+  border: 3px solid var(--text-color);
   border-radius: 5px;
 }
 

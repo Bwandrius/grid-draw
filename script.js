@@ -12,7 +12,7 @@ function fillGrid (size) {
 
     for (let i = 0; i < amount; i++) {
         let gridCell = document.createElement('div');
-        gridCell.addEventListener('mouseover', cellColourFill)
+        gridCell.addEventListener('mouseover', cellColorFill)
         gridCell.style.backgroundColor = 'white';
         gridContainer.insertAdjacentElement('beforeend', gridCell); 
     }
@@ -26,7 +26,7 @@ function changeSize (input) {
     }
 }
 
-function cellColourFill () {
+function cellColorFill () {
     if (click) {
         if (color === 'random') {
             this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
@@ -36,8 +36,8 @@ function cellColourFill () {
     }
 }
 
-function changeFillColour (choice) {
-    colour = choice;
+function changeFillColor (choice) {
+    color = choice;
 }
 
 function resetGrid () {
